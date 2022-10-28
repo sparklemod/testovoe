@@ -1,0 +1,16 @@
+CREATE TABLE Player
+(
+    pass INT PRIMARY KEY,
+    full_name VARCHAR(100),
+    e-mail VARCHAR(100),
+    phone VARCHAR(15),
+    avr_place INT,
+    date_of_birth DATE,
+    age INT,
+    recording_time TIMESTAMP,
+    biography TEXT,
+    presentation BLOB
+);
+
+SELECT full_name, COUNT(turnout) AS Count 
+FROM Results_of_Сompetitors GROUP BY (full_name) ORDER BY COUNT(turnout) DESC LIMIT 5;
